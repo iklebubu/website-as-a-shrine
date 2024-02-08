@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "Garamond";
+    src:
+      url("assets/font/GARABD.TTF");
+    font-weight: regular;
+  }
+
+body {
+    font-family: "Garamond";
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #b0c4de; /* Light blue background color */
+    text-transform: lowercase;
+}
+
+  #bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: grayscale(1);
+  }
+  
+  .desktop {
+    display: grid;
+    grid-template-columns: 200px 120px; /* Adjust column count as needed */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .folder {
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .folder:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+  
+  .folder-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .folder-name {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+
+  .folder-name:hover {
+    cursor: text;
+  }
+
+  
