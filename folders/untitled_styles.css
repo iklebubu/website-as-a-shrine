@@ -38,6 +38,7 @@ body {
     height: auto;
     display: block;
     transition: transform 0.3s ease;
+    filter: grayscale(1.0);
   }
 
   .grid-item video {
@@ -45,6 +46,7 @@ body {
     height: auto;
     display: block;
     transition: transform 0.3s ease;
+    filter: grayscale(1.0);
   }
   
   .grid-item img:hover {

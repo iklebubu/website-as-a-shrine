@@ -34,6 +34,15 @@ body {
     padding: 10px;
     text-align: center;
     transition: transform 0.3s ease;
+    animation: appear 2s;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0%;
+    } to {
+      opacity: 100%;
+    }
   }
   
   .folder:hover {
