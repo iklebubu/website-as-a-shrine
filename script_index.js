@@ -140,8 +140,14 @@ function appearSubWindow(folderId) {
     var string = "subwindow" + folderId;
     var subwindow = document.getElementById(string);
     if (subwindow) {
+        const top = Math.floor(Math.random() * (15 - 8 + 1)) + 8;
+        const left = Math.floor(Math.random() * (40 - 28 + 1)) + 28;
+        subwindow.style.top = top.toString() + "%";
+        subwindow.style.left = left.toString() + "%";
         subwindow.style.display = 'block';
     }
+
+
 }
 
 /**function appearSubWindow() {

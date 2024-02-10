@@ -10,9 +10,11 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #b0c4de; /* Light blue background color */
     text-transform: lowercase;
     cursor: none;
+    overflow-y: hidden;
+    background-image: url("assets/photos/background.png");
+    background-size: cover;
 }
 
 .close-button:hover {
@@ -38,6 +40,7 @@ body {
     object-fit: cover;
     z-index: -1;
     filter: grayscale(1);
+    background-repeat: repeat-y;
   }
   
   .desktop {
@@ -45,6 +48,7 @@ body {
     grid-template-columns: 200px 120px; /* Adjust column count as needed */
     gap: 20px;
     padding: 20px;
+    cursor: none;
   }
   
   .folder {
@@ -63,13 +67,16 @@ body {
   }
   
   .folder:hover {
-    transform: scale(1.05);
+    /**transform: scale(1.05);*/
   }
   
   .folder-icon {
     width: 70px;
     height: 70px;
-    cursor: url("assets/select_cursor.png"), auto;
+  }
+
+  .folder-icon:hover {
+    filter: brightness(100%) saturate(100%) sepia(100%) hue-rotate(0deg); /* Adjust to red */
   }
   
   .folder-name {
@@ -78,7 +85,7 @@ body {
   }
 
   .folder-name:hover {
-    cursor: url("assets/rename_cursor.png"), auto;
+    color: red;
   }
 
   .subwindow {
@@ -90,7 +97,7 @@ body {
     position: absolute;
     z-index: 3;
     display: none;
-    cursor: url("assets/select_cursor.png"), auto;
+    cursor: none;
   }
   
   .grid-container {
@@ -98,10 +105,16 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
     padding: 20px;
+    cursor: none;
   }
 
   .grid-item {
     height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .grid-item:hover {
+    
   }
   
   .grid-item img,
@@ -112,14 +125,10 @@ body {
     transition: transform 0.3s ease;
     filter: grayscale(1.0);
   }
+
   
-  #filename {
-    margin-top: 5px;
-    font-size: 16px;
-  }
-  
-  #filename:hover {
-    cursor: url("assets/rename_cursor.png"), auto;
+  .filename:hover {
+    color: red;
 }
 
   .close-button {
