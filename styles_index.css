@@ -12,7 +12,7 @@ body {
     overflow: hidden;
     background-color: #b0c4de; /* Light blue background color */
     text-transform: lowercase;
-    cursor: url("assets/default_cursor.png"), auto;
+    cursor: none;
 }
 
 .close-button:hover {
@@ -126,7 +126,7 @@ body {
     background-color: transparent;
     border: none;
     padding: 0;
-    cursor: pointer;
+    cursor: none;
   }
   
   .close-button img {
@@ -138,4 +138,16 @@ body {
     border: 1px solid black; /* Change border color when focused */
     outline: none; /* Remove default focus outline */
     background-color: rgba(255,255,255,0.1); /* Change background color when focused */
+}
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  filter: blur(10px);
+  z-index: 9999;
 }

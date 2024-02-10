@@ -157,7 +157,49 @@ function appearSubWindow(folderId) {
 
 $(".folder").draggable();
 $(".subwindow").draggable();
+// Make grid items draggable
 $(".grid-item").draggable();
 
+$(document).ready(function() {
+    $(".grid-item").draggable({
+        revert: true, // Snap back if not dropped in a droppable area
+        zIndex: 100,
+        start: function(event, ui) {
+            // Keep a reference to the dragged item
+            $(this).data("origin", $(this).closest(".subwindow"));
+        }
+    });
+
+    $(".subwindow").droppable({
+        accept: ".grid-item",
+        drop: function(event, ui) {
+            var droppedItem = ui.draggable;
+
+            // Remove the dragged item from its original subwindow
+            var originSubwindow = droppedItem.data("origin");
+            droppedItem.appendTo($(this).find(".grid-container"));
+
+            // Apply styling and update event handlers for the dropped item
+            droppedItem.css({ top: 0, left: 0 });
+            makeFileNameEditable(droppedItem.find(".filename")[0]);
+
+            // Optionally, you can save changes to the server or local storage
+            // to reflect the new arrangement of grid items
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const cursor = document.createElement('div');
+    cursor.classList.add('cursor');
+    document.body.appendChild(cursor);
+  
+    document.addEventListener('mousemove', function (e) {
+      const x = e.clientX;
+      const y = e.clientY;
+      cursor.style.left = x + 'px';
+      cursor.style.top = y + 'px';
+    });
+  });
 
 
