@@ -5,69 +5,329 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>nóstos</title>
     <link rel="stylesheet" href="styles_index.css" />
-    <script src="script_index.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   </head>
   <body>
     <img id="bg" src="assets/photos/background.png" />
-
     <div class="desktop">
-      <div class="folder" draggable="true" ondragstart="dragStart(event)">
-        <a href="folders/untitled_1.html"
-          ><img src="assets/folder.png" alt="Folder Icon" class="folder-icon"
-        /></a>
-        <p class="folder-name" ondblclick="makeFolderNameEditable(this)">
+      <div class="folder">
+        <img
+          id="1"
+          src="assets/folder1.png"
+          onclick="appearSubWindow('1')"
+          alt="Folder Icon"
+          class="folder-icon"
+        />
+        <p class="folder-name" onclick="makeFolderNameEditable(this)">
           untitled
         </p>
       </div>
       <div class="folder">
-        <a href="folders/untitled_2.html">
-          <img src="assets/folder.png" alt="Folder Icon" class="folder-icon"
-        /></a>
-        <p class="folder-name" ondblclick="makeFolderNameEditable(this)">
+        <img
+          id="2"
+          src="assets/folder1.png"
+          onclick="appearSubWindow('2')"
+          alt="Folder Icon"
+          class="folder-icon"
+        />
+        <p class="folder-name" onclick="makeFolderNameEditable(this)">
           untitled
         </p>
       </div>
       <div class="folder">
-        <a href="folders/untitled_3.html">
-          <img src="assets/folder.png" alt="Folder Icon" class="folder-icon" />
-        </a>
-        <p class="folder-name" ondblclick="makeFolderNameEditable(this)">
+        <img
+          id="3"
+          src="assets/folder1.png"
+          onclick="appearSubWindow('3')"
+          alt="Folder Icon"
+          class="folder-icon"
+        />
+        <p class="folder-name" onclick="makeFolderNameEditable(this)">
           untitled
         </p>
       </div>
       <div class="folder">
-        <a href="folders/untitled_4.html">
-          <img src="assets/folder.png" alt="Folder Icon" class="folder-icon"
-        /></a>
-        <p class="folder-name" ondblclick="makeFolderNameEditable(this)">
+        <img
+          id="4"
+          src="assets/folder1.png"
+          onclick="appearSubWindow('4')"
+          alt="Folder Icon"
+          class="folder-icon"
+        />
+        <p class="folder-name" onclick="makeFolderNameEditable(this)">
           untitled
         </p>
       </div>
       <div class="folder">
-        <a href="folders/untitled_5.html">
-          <img src="assets/folder.png" alt="Folder Icon" class="folder-icon"
-        /></a>
-        <p class="folder-name" ondblclick="makeFolderNameEditable(this)">
+        <img
+          id="5"
+          src="assets/folder1.png"
+          onclick="appearSubWindow('5')"
+          alt="Folder Icon"
+          class="folder-icon"
+        />
+        <p class="folder-name" onclick="makeFolderNameEditable(this)">
           untitled
         </p>
       </div>
       <div class="folder">
-        <a href="folders/untitled_6.html">
-          <img src="assets/folder.png" alt="Folder Icon" class="folder-icon" />
-        </a>
-        <p class="folder-name" ondblclick="makeFolderNameEditable(this)">
+        <img
+          id="6"
+          src="assets/folder1.png"
+          onclick="appearSubWindow('6')"
+          alt="Folder Icon"
+          class="folder-icon"
+        />
+        <p class="folder-name" onclick="makeFolderNameEditable(this)">
           untitled
         </p>
       </div>
       <div class="folder">
-        <a href="folders/untitled_7.html">
-          <img src="assets/folder.png" alt="Folder Icon" class="folder-icon"
-        /></a>
-        <p class="folder-name" ondblclick="makeFolderNameEditable(this)">
+        <img
+          id="7"
+          src="assets/folder1.png"
+          onclick="appearSubWindow('7')"
+          alt="Folder Icon"
+          class="folder-icon"
+        />
+        <p class="folder-name" onclick="makeFolderNameEditable(this)">
           untitled
         </p>
       </div>
-      <!-- Add more folders as needed -->
+      <!-- Subwindows that appear -->
+      <div class="subwindow" id="subwindow1">
+        <button class="close-button" onclick="closeSubWindow('subwindow1')">
+          <p id="close_text">X</p>
+        </button>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="assets/photos/untitled 1/untitled_1_1.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 1/untitled_1_2.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 1/untitled_1_3.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <video controls>
+              <source src="assets/photos/untitled 1/untitled_1_5.mp4" />
+            </video>
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 1/untitled_1_4.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="subwindow" id="subwindow2">
+        <button class="close-button" onclick="closeSubWindow('subwindow2')">
+          <p id="close_text">X</p>
+        </button>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="assets/photos/untitled 2/untitled_2_1.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 2/untitled_2_2.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 2/untitled_2_3.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 2/untitled_2_4.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <!-- Add more grid items with smartphone pics as needed -->
+        </div>
+      </div>
+      <div class="subwindow" id="subwindow3">
+        <button class="close-button" onclick="closeSubWindow('subwindow3')">
+          <p id="close_text">X</p>
+        </button>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="assets/photos/untitled 3/untitled_3_1.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 3/untitled_3_2.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 3/untitled_3_3.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <video controls>
+              <source src="assets/photos/untitled 3/untitled_3_4.mp4" />
+            </video>
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="subwindow" id="subwindow4">
+        <button class="close-button" onclick="closeSubWindow('subwindow4')">
+          <p id="close_text">X</p>
+        </button>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="assets/photos/untitled 4/untitled_4_1.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 4/untitled_4_2.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 4/untitled_4_3.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="subwindow" id="subwindow5">
+        <button class="close-button" onclick="closeSubWindow('subwindow5')">
+          <p id="close_text">X</p>
+        </button>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="assets/photos/untitled 5/untitled_5_1.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <video controls>
+              <source src="assets/photos/untitled 5/untitled_5_4.mp4" />
+            </video>
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 5/untitled_5_2.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 5/untitled_5_3.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="subwindow" id="subwindow6">
+        <button class="close-button" onclick="closeSubWindow('subwindow6')">
+          <p id="close_text">X</p>
+        </button>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="assets/photos/untitled 6/untitled_6_1.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 6/untitled_6_2.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 6/untitled_6_3.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 6/untitled_6_4.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 6/untitled_6_5.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <!-- Add more grid items with smartphone pics as needed -->
+        </div>
+      </div>
+      <div class="subwindow" id="subwindow7">
+        <button class="close-button" onclick="closeSubWindow('subwindow7')">
+          <p id="close_text">X</p>
+        </button>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="assets/photos/untitled 7/untitled_7_1.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 7/untitled_7_4.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 7/untitled_7_3.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="assets/photos/untitled 7/untitled_7_2.jpg" />
+            <p class="filename" onclick="makeFileNameEditable(this)">
+              untitled
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="script_index.js"></script>
   </body>
 </html>

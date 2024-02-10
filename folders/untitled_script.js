@@ -6,3 +6,6 @@ function makeFileNameEditable(filenameElement) {
         filenameElement.contentEditable = false;
     });
 }
+
+$(".grid-item").draggable();
+
